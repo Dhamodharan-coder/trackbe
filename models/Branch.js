@@ -53,7 +53,6 @@ const BranchSchema = new mongoose.Schema(
       },
       branchType: {
         type: String,
-        required: true,
       },
       vehicleType: {
         type: [String],
