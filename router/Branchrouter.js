@@ -112,7 +112,7 @@ router.get("/download-excel", authMiddleware, async (req, res) => {
       worksheet.addRow(Object.values(branch.toObject()));
     });
 
-    const filePath = path.join(uploadDir, "BranchDetails.xlsx");
+    const filePath = path.join("./uploads", "BranchDetails.xlsx");
     await workbook.xlsx.writeFile(filePath);
 
     res.download(filePath, "BranchDetails.xlsx", (err) => {
